@@ -1,0 +1,15 @@
+# Command for building array_syntax.c source file into 
+# array_syntax.exe file 
+
+>cl /Fe:array_syntax.exe array_syntax.c 
+
+# How to run the exe file 
+
+> array_syntax.exe 
+
+# Command for building array_with_initialization_syntax.c 
+
+> cl /Fe:array_with_initialization_syntax.exe array_with_initialization_syntax.c 
+
+# Command for running array_with_initialization_syntax.exe 
+> array_with_initialization_syntax.exe 

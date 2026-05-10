@@ -1,0 +1,207 @@
+#include <windows.h>
+#include "Window.h"
+DHP_ICON ICON "Icon.ico"
+
+PrintCancel DIALOG 10,10,100,40
+CAPTION "Stop Printing(?)"
+STYLE WS_CAPTION | WS_POPUP | WS_SYSMENU | WS_VISIBLE |WS_CHILD
+BEGIN
+	PUSHBUTTON "Cancel",IDCANCEL,35,12,30,14,WS_TABSTOP
+END
+
+MYMENU MENU
+BEGIN
+
+POPUP "&File"
+
+BEGIN
+	
+	POPUP "&File"
+	BEGIN
+	MENUITEM "&Open File",IDM_OPEN
+	MENUITEM "&Print",IDM_PRINT
+	MENUITEM "&Exit",IDM_EXIT
+        END
+
+	POPUP "&Edit"
+	BEGIN
+	MENUITEM "&Image Edit",IDM_EDIT	
+	END
+
+	POPUP "&Help"
+	BEGIN
+	MENUITEM "&ABOUT",IDM_APP_ABOUT
+	END
+END
+
+        
+END
+
+DATAENTRY DIALOGEX 0, 0, 300, 250
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "Image Editor and Color Picker"
+FONT 9, "Segoe UI"
+BEGIN
+
+    // =========================
+    // TOP CENTER CONTROLS
+    // =========================
+    PUSHBUTTON "REGISTER USER",
+               IDD_REGISTER_DIALOG,
+               105, 5, 90, 14
+
+    RADIOBUTTON "Image Editor",
+                IDR_IMAGE_EFFECTS,
+                10, 22, 80, 12
+
+
+    // =========================
+    // IMAGE EFFECTS GROUP
+    // =========================
+    GROUPBOX "Image Effects",
+             IDG_IMAGE_EDITOR,
+             10, 40, 280, 80
+
+        GROUPBOX "Desaturation",
+                 IDG_DESATURATION,
+                 20, 55, 80, 50
+        PUSHBUTTON "Apply",
+                   ID_APPLY_DESATURATION_EFFECT,
+                   25, 70, 50, 12
+        PUSHBUTTON "Reset",
+                   ID_RESET_DESATURATION_EFFECT,
+                   25, 85, 50, 12
+
+        GROUPBOX "Sepia",
+                 IDG_SEPIA,
+                 110, 55, 80, 50
+        PUSHBUTTON "Apply",
+                   ID_APPLY_SEPIA_EFFECT,
+                   115, 70, 50, 12
+        PUSHBUTTON "Reset",
+                   ID_RESET_SEPIA_EFFECT,
+                   115, 85, 50, 12
+
+        GROUPBOX "Negative",
+                 IDG_NEGATIVE,
+                 200, 55, 80, 50
+        PUSHBUTTON "Apply",
+                   ID_APPLY_NEGATIVE_EFFECT,
+                   205, 70, 50, 12
+        PUSHBUTTON "Reset",
+                   ID_RESET_NEGATIVE_EFFECT,
+                   205, 85, 50, 12
+
+
+    // =========================
+    // COLOR PICKER RADIO (ABOVE)
+    // =========================
+    RADIOBUTTON "Color Picker",
+                IDR_PICK_COLOR,
+                10, 125, 80, 12
+
+
+    // =========================
+    // COLOR PICKER GROUP
+    // =========================
+    GROUPBOX "Color Picker",
+             IDG_COLOR_PICKER,
+             10, 140, 280, 75
+
+        LTEXT "Picked Color:",
+              IDC_STATIC_TEXT_PICKED_COLOR,
+              20, 155, 70, 12
+
+        LTEXT "R:", IDC_STATIC_TEXT_RTEXT, 20, 170, 12, 12
+        LTEXT "G:", IDC_STATIC_TEXT_GTEXT, 20, 185, 12, 12
+        LTEXT "B:", IDC_STATIC_TEXT_BTEXT, 20, 200, 12, 12
+
+        EDITTEXT IDC_STATIC_R_VALUE, 40, 168, 40, 14, ES_READONLY
+        EDITTEXT IDC_STATIC_G_VALUE, 40, 183, 40, 14, ES_READONLY
+        EDITTEXT IDC_STATIC_B_VALUE, 40, 198, 40, 14, ES_READONLY
+
+	CONTROL "", IDC_COLOR_BOX, "STATIC", SS_OWNERDRAW | WS_BORDER, 80, 168, 40, 40
+
+        CHECKBOX "Export picked color to log file",
+                 IDC_LOG, 120, 170, 150, 12
+
+        CHECKBOX "Export normalized picked color",
+                 IDC_NOR_LOG, 120, 188, 160, 12
+
+
+    // =========================
+    // BOTTOM BUTTONS
+    // =========================
+    PUSHBUTTON "About", IDM_APP_ABOUT, 30, 225, 50, 14
+    DEFPUSHBUTTON "OK", IDOK,          120, 225, 50, 14
+    PUSHBUTTON "Exit", IDCANCEL,       200, 225, 50, 14
+
+END
+
+ABOUTBOX DIALOG DISCARDABLE  32, 32, 180, 100
+STYLE DS_MODALFRAME | WS_POPUP  
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,66,80,50,14
+    ICON            "DHP_ICON",IDC_STATIC,7,7,21,20
+    CTEXT           "Image Editor",IDC_STATIC,40,12,100,8
+    CTEXT           "By",IDC_STATIC,7,40,166,8
+    CTEXT           "Dnyaneshwar Haribhau Pingale, 2025",IDC_STATIC,7,52,166,8
+END
+
+
+
+IDD_REGISTER_DIALOG DIALOGEX 0, 0, 300, 200
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "User Registration"
+FONT 9, "Segoe UI"
+BEGIN
+
+    // ---- Static labels ----
+    LTEXT "First Name:",  IDL_FIRST_TEXT,  20, 20, 70, 12
+    LTEXT "Middle Name:", IDL_MIDDLE_TEXT, 20, 55, 70, 12
+    LTEXT "Last Name:",   IDL_LAST_TEXT,   20, 90, 70, 12
+
+    // ---- Edit controls ----
+    EDITTEXT IDC_FIRST_NAME,  100, 18, 160, 14, ES_AUTOHSCROLL
+    EDITTEXT IDC_MIDDLE_NAME, 100, 53, 160, 14, ES_AUTOHSCROLL
+    EDITTEXT IDC_LAST_NAME,   100, 88, 160, 14, ES_AUTOHSCROLL
+
+    // ---- Buttons ----
+    PUSHBUTTON "Register", ID_REGISTER_BUTTON, 70, 135, 70, 20
+    PUSHBUTTON "Cancel",   IDCANCEL,           160,135, 70, 20
+
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

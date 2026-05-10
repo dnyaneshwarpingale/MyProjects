@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\CLSID\{401ACB83-0E9B-4930-9A2C-A19484F5EBFC}]
+@="DHP_DesaturationSepiaNegativeDLL"
+[HKEY_CLASSES_ROOT\CLSID\{401ACB83-0E9B-4930-9A2C-A19484F5EBFC}\InprocServer32]
+@="C:\\Windows\\System32\\DesaturationSepiaNegativeDLL.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{8D259429-D813-42F2-B7D7-B7F167296F52}]
+@="DHP_NegativeDLL"
+[HKEY_CLASSES_ROOT\CLSID\{8D259429-D813-42F2-B7D7-B7F167296F52}\InprocServer32]
+@="C:\\Windows\\System32\\NegativeDLL.dll"
+
+
+
+
+
+
+
+
+

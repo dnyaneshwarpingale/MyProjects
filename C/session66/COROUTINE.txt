@@ -1,0 +1,30 @@
+COROUTINE
+    SUBROUTINE 
+        PROCEDURE 
+        FUNCTION
+    CLASS CHYA ATT LIHILELA FUNCTION -> METHOD 
+
+RAVI SETHI -> PPL 
+
+COROUTINE -> CONCURRENT / ASYNCHRONOUS  
+    SUBROUTINE 
+        PROCEDURE -> PROCEDURAL PROGRAMMING PARADIGM  
+        FUNCTION  -> FUNCTIONAL PROGRAMMING PARADIGM 
+    FUNCTION INSIDE CLASS -> OBJECT BASED / OBJECT ORIENTED PARADIGM  
+        C++                 Java 
+        
+        member function     method 
+        
+        static member       static method 
+        function 
+        
+        virtual function    method is a virtual by default 
+
+        pure & virtual      abstract method 
+        function 
+
+        template function   generic method 
+
+ANONYMOUS FUNCTION -> LAMBDA
+
+ALONZO CHURCH -> MATHEMATICIAN -> 1930 -> LAMBDA CALCULUS 

@@ -1,0 +1,5 @@
+User picked color RGB = (146,144,143)
+User picked color RGB = (101,100,98)
+User picked color RGB = (159,159,157)
+User picked color RGB = (162,161,159)
+User picked color RGB = (150,150,148)

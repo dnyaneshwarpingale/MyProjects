@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\CLSID\{EC0B31AF-97D8-4D77-95EA-CE542F1FBE6D}]
+@="DHP_AggregationInnerDll"
+[HKEY_CLASSES_ROOT\CLSID\{EC0B31AF-97D8-4D77-95EA-CE542F1FBE6D}\InprocServer32]
+@="C:\\Windows\\System32\\AggregationInnerDLLServer.dll"
+
+

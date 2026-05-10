@@ -1,0 +1,28 @@
+Block Statement: 
+    Block statement is a statement which has a header body syntax. 
+    Header of a statement has a KEYWORD of language. 
+    Body of any block statement is usually enclosed in a pair of 
+    curly brackets. 
+    (there are very few exception to this, most notably the Python 
+    programming language which does not use curly brackets)
+
+HEADER + BODY 
+
+c = a + b; 
+
+if(cond)
+{
+    st1 
+    st2 
+    st3
+}
+next statement 
+
+if cond: 
+    st1 
+    st2
+    st3 
+next statement 
+
+
+    

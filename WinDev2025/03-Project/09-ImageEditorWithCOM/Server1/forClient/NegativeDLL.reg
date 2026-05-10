@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\CLSID\{8D259429-D813-42F2-B7D7-B7F167296F52}]
+@="DHP_NegativeDLL"
+[HKEY_CLASSES_ROOT\CLSID\{8D259429-D813-42F2-B7D7-B7F167296F52}\InprocServer32]
+@="C:\\Windows\\System32\\NegativeDLL.dll"
+
+
+
+

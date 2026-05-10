@@ -1,0 +1,8 @@
+win
+c /EHsc /Fe:app.exe main.c helper.c
+
+#linux
+gcc -o app main.c helper.c
+
+macos
+clang -o app main.c helper.c

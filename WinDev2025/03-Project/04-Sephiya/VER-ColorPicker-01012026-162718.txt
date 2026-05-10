@@ -1,0 +1,11 @@
+Register User Name:V ER
+User Registration Date: 01/01/2026
+User Registration Date: 16:27:18
+User picked color RGB = (234,117,36)
+User picked color RGB = (139,110,90)
+User picked color RGB = (169,144,131)
+User picked color RGB = (254,94,52)
+User picked color RGB = (147,123,107)
+User picked color RGB = (186,22,38)
+User picked color RGB = (158,138,127)
+User picked color RGB = (254,94,53)

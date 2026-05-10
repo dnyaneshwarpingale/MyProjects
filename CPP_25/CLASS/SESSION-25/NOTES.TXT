@@ -1,0 +1,5 @@
+CPP ne reference variable cha vapar 
+sagalyat bhari ithe kela aahe. to overload subscript operator []
+
+A[i] = val;
+int& operator []()

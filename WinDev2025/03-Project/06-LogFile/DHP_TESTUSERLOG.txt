@@ -1,0 +1,2 @@
+User log file created and opened successfully.
+User log file terminated  successfully.

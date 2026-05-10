@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\CLSID\{585F3BC5-1052-4E02-AC13-0645945F484B}]
+@="DHP_AggregationOuterDll"
+[HKEY_CLASSES_ROOT\CLSID\{585F3BC5-1052-4E02-AC13-0645945F484B}\InprocServer32]
+@="C:\\Windows\\System32\\AggregationOuterDLLServer.dll"
+
+
+
+
+

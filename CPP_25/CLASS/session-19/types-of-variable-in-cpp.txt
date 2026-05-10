@@ -1,0 +1,12 @@
+1) Instance variable
+    Built in types:
+        char c;
+        unsigned char cNum;
+
+        short int sNum;
+        unsigned short int usNum;
+
+        int iNum;
+        unsigned int uiNum;
+        
+        

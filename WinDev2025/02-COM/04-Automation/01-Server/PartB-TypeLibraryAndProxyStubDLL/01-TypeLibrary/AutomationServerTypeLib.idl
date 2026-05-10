@@ -1,0 +1,46 @@
+import "unknwn.idl" ;  //it is an Iunknown idl file.
+
+//IMyMath Interface//Imymath interface attribute block.
+[
+	object,
+	uuid(E82B9B37-E8A1-44E7-A0AC-2465B7A8484D),//IID of IMyMath
+	helpstring("IMyMath Interface"),
+	pointer_default(unique),//ya interface ch pointer ha unique pointer mhanun treate kela jail.
+	dual,         //imymath is dual like it will provide imymath and idispatch
+	oleautomation
+]
+
+//imymath defination block
+interface IMyMath : IDispatch
+{
+	import "oaidl.idl";
+	HRESULT SumOfTwoIntegers([in] int, [in] int, [out, retval]int*);
+	HRESULT SubtractionOfTwoIntegers([in] int, [in] int, [out, retval]int*); 
+
+};
+
+//The Actual TypeLib Related Code//type library attribute block
+
+[
+	uuid(B5C04196-02DE-4A18-8D55-6C6D59DE525C),//LBID OF TypeLibrary
+		version(1.0),//major version number.minor version number
+		helpstring("MyMath Component's Type Library")
+]
+
+//typelibrary defination block
+library AutomationServerTypeLib
+{
+	importlib("stdole32.tlb");//#it is standard com type library.
+
+	//component code//cmymath coclass attribute
+	[
+		uuid(7379E19F-22EC-4037-8F2E-E3E6FA549D0A),//Clsid of CMyMath
+			helpstring("Mat Automation Component Class Cmymath coclass")
+	]
+
+		//CMyMath defination block
+		coclass CMyMath
+	{
+		[default] interface IMyMath;
+	};
+};

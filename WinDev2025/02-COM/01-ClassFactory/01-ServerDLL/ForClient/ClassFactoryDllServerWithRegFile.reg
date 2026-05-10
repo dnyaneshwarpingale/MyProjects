@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\CLSID\{474044A5-AEC4-4067-BF78-4793D358FB53}]
+@="DHP_ClassFactoryDll"
+[HKEY_CLASSES_ROOT\CLSID\{474044A5-AEC4-4067-BF78-4793D358FB53}\InprocServer32]
+@="C:\\Windows\\System32\\ClassFactoryDllServerWithRegFile.dll"
+
+

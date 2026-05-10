@@ -1,0 +1,16 @@
+#include "Window.h"
+DHP_ICON ICON Icon.ico
+DHP_BITMAP BITMAP MyBitMapFour.bmp
+
+
+
+
+
+
+
+
+
+
+
+
+

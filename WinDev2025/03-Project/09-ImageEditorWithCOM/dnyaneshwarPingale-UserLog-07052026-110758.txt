@@ -1,0 +1,6 @@
+Register User Name:dnyaneshwar Pingale
+User Registration Date: 07/05/2026
+User Registration Date: 11:07:58
+User Applied Desaturation Effect. 
+Program exited at : 07/05/2026 11:09:29
+Program Terminated Successfully.

@@ -1,0 +1,9 @@
+LIBRARY ContainmentOuterDLLServer.dll
+EXPORTS
+		DllGetClassObject   PRIVATE
+		DllCanUnloadNow     PRIVATE
+
+
+
+
+

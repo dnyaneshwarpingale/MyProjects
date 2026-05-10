@@ -1,0 +1,16 @@
+Register User Name:Dnyaneshwar Pingale
+User Registration Date: 06/02/2026
+User Registration Date: 21:19:04
+User picked color RGB = (231,115,188)
+User picked color RGB = (66,65,3)
+User picked color RGB = (199,8,110)
+User picked color RGB = (240,97,178)
+User picked color RGB = (127,12,68)
+User picked color RGB = (251,121,196)
+User picked color RGB = (160,184,3)
+User picked color RGB = (104,145,3)
+User picked color RGB = (144,183,2)
+User picked color RGB = (11,151,187)
+User picked color RGB = (174,8,87)
+User picked color RGB = (197,227,38)
+User picked color RGB = (3,101,133)

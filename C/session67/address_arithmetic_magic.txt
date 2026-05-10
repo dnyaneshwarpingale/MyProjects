@@ -1,0 +1,36 @@
+int a[8]; 
+
+Let base address of array be 1000. 
+
+index:  0       1       2       3       4       5       6       7      
+addr:   1000    1004    1008    1012    1016    1020    1024    1028
+
+int* ptr = &a[0]; 
+
+int a[8]; 
+
+type(a)     ==  int     []
+type(a[i])  ==  int
+type(&a[i]) ==  int* 
+
+a[0] == int 
+a[1] == int 
+a[2] == int 
+a[3] == int 
+a[4] == int 
+a[5] == int 
+a[6] == int 
+a[7] == int 
+
+int* ptr = &a[0]; 
+
+ptr == 1000 
+
+ptr + 0 
+ptr + 1 
+ptr + 2 == address in ptr + 2 * sizeof(int) == 1000 + 2 * 4 == 1000 + 8 == 1008 
+ptr + 3 
+ptr + 4 
+ptr + 5 
+ptr + 6 
+ptr + 7 

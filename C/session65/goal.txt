@@ -1,0 +1,11 @@
+int (*signal(int, void(*)(int)))(void); 
+
+scandir(
+        const char* dir_name, 
+        struct entry***, 
+        int (*)(const struct dentry**, const struct dentry**), 
+        int (*)(const struct entry*)
+    ); 
+
+pthread_t pthread_create(pthread_t*, pthread_attr_t*, void*(*)(void*), void*); 
+pthread_t pthread_join(pthread_t, void**); 

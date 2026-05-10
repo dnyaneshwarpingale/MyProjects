@@ -1,0 +1,8 @@
+Program started successsfully.
+User log file created and opened successfully.
+User picked a color.
+User picked a color.
+User picked a color.
+User picked a color.
+User picked a color.
+User log file terminated  successfully.

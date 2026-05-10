@@ -1,0 +1,148 @@
+// Win32 headers
+#include <windows.h>
+
+#include "Window.h"
+
+#include "MyMathTwo.h"
+
+
+// Global function declarations
+LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
+ 
+// Entry-point function
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLine, int iCmdShow)// process chya ayshyachi survat
+{
+    // Variable declarations
+    WNDCLASSEX wndClass;
+    HWND hwnd;
+    MSG msg;
+    TCHAR szAppName[] = TEXT("DHP_Window");
+
+    // Code
+    memset((void *)&wndClass, 0, sizeof(WNDCLASSEX));
+    // Window class initialization
+    wndClass.cbSize = sizeof(WNDCLASSEX);
+    wndClass.style = CS_HREDRAW | CS_VREDRAW;
+    wndClass.cbClsExtra = 0;
+    wndClass.cbWndExtra = 0;
+    wndClass.lpfnWndProc = WndProc;
+    wndClass.hInstance = hInstance;
+    wndClass.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
+    wndClass.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(DHP_ICON));
+    wndClass.hCursor = LoadCursor(NULL, IDC_ARROW);
+    wndClass.lpszClassName = szAppName;
+    wndClass.lpszMenuName = NULL;
+    wndClass.hIconSm = LoadIcon(hInstance, MAKEINTRESOURCE(DHP_ICON));
+
+    // Registration of window class
+    RegisterClassEx(&wndClass);
+    // Create window
+    hwnd = CreateWindow(szAppName,                   // name of your window class
+                        TEXT("DHP:My First Window"), // window caption bar text
+                        WS_OVERLAPPEDWINDOW,         // window style overlappedwindow
+                                             //  it is combination of 6 window styles ws_overlapped | ws_caption |
+                        //  ws_thickframe | ws_sysmenu | ws_minimizebox | ws_maximizebox
+                        CW_USEDEFAULT, // x from desktop origin
+                        CW_USEDEFAULT, // create window y from desktop origin
+                        CW_USEDEFAULT, // width
+                        CW_USEDEFAULT, // height
+                        NULL,          // parent window here is desktop window is parent or HWND_DESKTOP
+                        NULL,          //  HMENU HANDLE OF MENU
+                        hInstance,     // handle to instance
+                        NULL);         //
+                                       // create window creates the window only in only in memory
+    // Show window
+    ShowWindow(hwnd, iCmdShow);
+
+    // Paint background of window
+    UpdateWindow(hwnd);
+
+    // Message loop
+    while (GetMessage(&msg, NULL, 0, 0)) // second parameter -> handle to the window ... null--> because default msges and child window msges
+    {                                    // parameter 3 and 4--> min and max limit of msges
+        TranslateMessage(&msg);          // simplify the msg
+        DispatchMessage(&msg);
+    }
+
+    return ((int)msg.wParam);
+}
+
+// Callback function
+LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
+{
+    // Code
+    //varible declaration
+    TCHAR str[255];
+    int num = 3;
+    int cube = 0;
+
+//declaring function pointer type and variable for the function from MyMathOne.dll
+    typedef int(*MakeCubeFnPtr)(int);
+    MakeCubeFnPtr pFunc = NULL;
+
+
+    HMODULE hDll = NULL; //CATCH THE ADDRESS OF DLL //STARTING ADDRESS 
+
+
+    switch (iMsg)
+    {
+    case WM_CREATE:
+       //Step1: Explicitly load your DLL
+        hDll = LoadLibrary(TEXT(".\\MyMathTwo.dll"));
+        if (hDll == NULL)
+        {
+            MessageBox(NULL, TEXT("load library failed"), TEXT("hdll is Null"), MB_ICONERROR);
+            DestroyWindow(hwnd);
+        }
+
+        //STEP 2: extract the address of desired funtion from the above loaded Dll and assign it to declared function pointer.
+        pFunc = (MakeCubeFnPtr)GetProcAddress(hDll, "MakeCube");
+        if (pFunc == NULL)
+        {
+            MessageBox(NULL, TEXT("ADDRESS NOT FOUND"), TEXT("PFUNC is Null"), MB_ICONERROR);
+            FreeLibrary(hDll);
+            hDll = NULL;
+            DestroyWindow(hwnd);
+
+        }
+
+        //step3: use the above function pointer to call the desired function from dll
+       cube = pFunc(num);
+
+
+        //step4:display the result
+        wsprintf(str, TEXT("cube of %d is %d "), num, cube);
+        MessageBox(NULL, str, TEXT("CUBE"), MB_OK);
+
+        //step5:once your work is done free the dll
+        if (hDll == NULL)
+        {
+            pFunc = NULL;
+            FreeLibrary(hDll);
+            hDll = NULL;
+            DestroyWindow(hwnd);
+
+        }
+
+        break;
+
+    case WM_KEYDOWN:
+        switch (wParam) {
+        case VK_ESCAPE:
+            DestroyWindow(hwnd);
+            break;
+        }
+
+        break;
+
+    case WM_DESTROY:
+        MessageBox(NULL, TEXT("WM_DESTROY arrived"), TEXT("Message"), MB_OK);
+        PostQuitMessage(0); // parameter of postquitmsg 0 is wparam of wm_quit
+        break;              // from this above 3line are  the message handler of wm_destroy
+
+    default:
+        break;
+    }
+
+    return (DefWindowProc(hwnd, iMsg, wParam, lParam)); // default window procedure .. operating system window procedure
+} // it send all handled and unhandled messages to os

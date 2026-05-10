@@ -1,0 +1,13 @@
+LIBRARY DesaturationSepiaNegativeDLL.dll
+EXPORTS
+		DllGetClassObject   PRIVATE
+		DllCanUnloadNow     PRIVATE
+
+
+
+
+
+
+
+
+

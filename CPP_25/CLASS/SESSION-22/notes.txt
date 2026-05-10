@@ -1,0 +1,26 @@
+Descrete Mathematics.
+
+Database management system==> Dependency closure ->transitive property
+         ==>Floid warshwall algorithm.
+
+Algebra and Trignometry by sullywan
+Rosen ==> Descrete Mathematics and its application
+
+advance Mathematics by jkrezig.
+
+thomus calculas.
+
+introduction to Linear Algebra by Gilbert strand
+
+Probability and statistics 
+
+youtube channel :- 3Blue1Brown 
+
+==> Theory of computation and compiler constructions.
+
+Compilers -Principles Techniques and Tools by Alferd aho-monica lam
+
+structural induction->mathematical induction -> Set Theory -> Predicate logic - propositonal Logic.
+
+absolute foundation of knowldge.
+

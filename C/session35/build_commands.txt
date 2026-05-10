@@ -1,0 +1,4 @@
+// > cd folder_of_source_code
+
+// > cl /Fe:app.exe formatted_output.c 
+// > app.exe

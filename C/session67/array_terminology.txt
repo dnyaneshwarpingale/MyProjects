@@ -1,0 +1,81 @@
+T arr[N]; 
+
+arr is array N of elements of type T. 
+
+int arr[8]; 
+arr is array 8 of elements of type int 
+
+
+char msg[32]; 
+msg is array 32 of elements of type char 
+
+float f_arr[10]; 
+f_arr is array 10 of elements of type float. 
+
+[repeat min 8 times]
+
+arr[i] == element at index i 
+
+&arr[i] == address of element at index i (in array named arr)
+
+arr[j] == element at index j 
+&arr[j] == address of element at index j (in array named arr)
+
+x[4] == element at index 4 (in array named x)
+&x[4] == address of element at index 4 (in array named x)
+
+[repeat minimum 8 times]
+
+#------------------------------------------------------------
+T arr[N]; 
+
+arr is array N of elements of type T. 
+
+T -> array element type 
+T -> array element type 
+T -> array element type 
+
+e.g. 
+int a[5]; 
+
+int -> array element type 
+int -> array element type 
+int -> array element type 
+
+float f_arr[8]; 
+float -> array element type 
+float -> array element type 
+float -> array element type 
+
+[repeat minimum 8 times]
+
+#--------------------------------------------
+T arr[N]; 
+T* ptr; 
+
+ptr is pointer to array element type 
+ptr is a pointer to array element type 
+ptr is a pointer to array element type 
+ptr is a pointer to array element type 
+ptr is a pointer to array element type 
+ptr is a pointer to array element type 
+
+T* ptr = &arr[0]; 
+ptr is a pointer to array element type which is 
+intialized to address of element at index 0 
+
+ptr is a pointer to array element type which is 
+initialized to address of element at index 0 
+
+ptr is a pointer to array element type which is 
+initalized to address of element at index 0 
+
+[repeat min 16 times]
+
+int a[8]; 
+int* p = &a[0]; 
+
+p is a pointer to array element type (which is an integer)
+initialized to address of element at index 0 
+
+[repeat min 16 times]

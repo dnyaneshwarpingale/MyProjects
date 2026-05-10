@@ -1,0 +1,11 @@
+LIBRARY AggregationOuterDLLServer.dll
+EXPORTS
+		DllGetClassObject   PRIVATE
+		DllCanUnloadNow     PRIVATE
+
+
+
+
+
+
+

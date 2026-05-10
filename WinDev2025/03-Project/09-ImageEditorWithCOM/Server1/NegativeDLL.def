@@ -1,0 +1,13 @@
+LIBRARY NegativeDLL.dll
+EXPORTS
+		DllGetClassObject   PRIVATE
+		DllCanUnloadNow     PRIVATE
+
+
+
+
+
+
+
+
+

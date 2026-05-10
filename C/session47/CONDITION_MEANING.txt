@@ -1,0 +1,17 @@
+Condition: 
+    any rhs expression type evaulation is BOOLEAN 
+    is known as a CONDITION. 
+
+You must satisfy two things to be a condition: 
+1) an expression must be a right hand side expression 
+2) type evaluation of an expression must be a boolean. 
+
+a = b + c; 
+
+10 > 5 -> 1 
+5 < 3 -> 0 
+
+3 == 7 -> 0 
+3 != 7 -> 1 
+
+if(cond)

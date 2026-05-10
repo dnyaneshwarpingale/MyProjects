@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\CLSID\{04D0356E-C087-495C-A5B0-3008FF6EB09A}]
+@="DHP_ContainmentOuterDll"
+[HKEY_CLASSES_ROOT\CLSID\{04D0356E-C087-495C-A5B0-3008FF6EB09A}\InprocServer32]
+@="C:\\Windows\\System32\\ContainmentOuterDLLServer.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4A414747-6A29-4BB9-9C12-87DE49B25432}]
+@="DHP_ContainmentInnerDll"
+[HKEY_CLASSES_ROOT\CLSID\{4A414747-6A29-4BB9-9C12-87DE49B25432}\InprocServer32]
+@="C:\\Windows\\System32\\ContainmentInnerDLLServer.dll"
+
+
+
+
+

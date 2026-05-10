@@ -1,0 +1,63 @@
+#pragma once
+
+#define DHP_ICON 101
+#define IDM_EDIT  102
+#define IDM_OPEN 103
+#define IDM_HELP 104
+#define MYMENU	 105
+#define IDM_PRINT 106
+#define IDM_EXIT 107
+#define DATAENTRY 108
+#define IDM_APP_ABOUT 109
+#define IDC_STATIC		-1
+#define ABOUTBOX 111
+#define ID_Dsaturate 112
+ 
+#define ID_APPLY_DESATURATION_EFFECT	201
+#define ID_APPLY_SEPIA_EFFECT			202
+#define ID_APPLY_NEGATIVE_EFFECT		203
+#define ID_RESET_DESATURATION_EFFECT	204
+#define ID_RESET_SEPIA_EFFECT			205
+#define ID_RESET_NEGATIVE_EFFECT		206
+#define IDG_IMAGE_EDITOR				207
+#define IDG_COLOR_PICKER				208
+#define IDG_DESATURATION				209
+#define IDG_SEPIA						210
+#define IDG_NEGATIVE					211
+#define IDR_IMAGE_EFFECTS				212
+#define IDR_PICK_COLOR					213
+#define IDC_STATIC_TEXT_PICKED_COLOR	214
+#define IDC_STATIC_R_VALUE				215
+#define IDC_STATIC_G_VALUE				216
+#define IDC_STATIC_B_VALUE				217
+#define IDC_STATIC_TEXT_RTEXT			218
+#define IDC_STATIC_TEXT_GTEXT			219
+#define IDC_STATIC_TEXT_BTEXT			220
+#define IDC_LOG							221
+#define IDC_NOR_LOG						222
+#define IDD_REGISTER_DIALOG				223
+#define IDC_FIRST_NAME					224
+#define IDC_MIDDLE_NAME					225
+#define IDC_LAST_NAME					226
+#define ID_REGISTER_BUTTON				227
+#define IDL_FIRST_TEXT					228
+#define IDL_MIDDLE_TEXT					229
+#define IDL_LAST_TEXT					230
+#define IDC_COLOR_BOX                   231
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

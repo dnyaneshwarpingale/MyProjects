@@ -1,0 +1,6 @@
+Normalized Colors between 0 and 1.
+User picked color RGB = (0.572549,0.564706,0.560784)
+User picked color RGB = (0.396078,0.392157,0.384314)
+User picked color RGB = (0.623529,0.623529,0.615686)
+User picked color RGB = (0.635294,0.631373,0.623529)
+User picked color RGB = (0.588235,0.588235,0.580392)

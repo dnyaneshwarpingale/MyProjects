@@ -1,0 +1,21 @@
+int* p; 
+
+p is a pointer to int. 
+#---------------------------------------------
+
+1) Choose name for pointer variable.
+    say ptr. 
+
+2) To convey the compiler that ptr is a pointer variable 
+    we must prefix its declaration/definition statement 
+    by 
+
+    *ptr; 
+
+3) Data type of data whose address must be stored in pointer 
+
+    int *ptr; 
+
+    
+
+   
